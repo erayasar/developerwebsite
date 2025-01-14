@@ -1,0 +1,177 @@
+/* Ana stil dosyası */
+
+/* Tema ve bileşen importları */
+@import 'themes/light.css';
+@import 'themes/dark.css';
+@import 'components/navbar.css';
+@import 'components/buttons.css';
+@import 'components/cards.css';
+@import 'components/about.css';
+@import 'components/forms.css';
+@import 'components/footer.css';
+@import 'components/courses.css';
+@import 'components/course-content.css';
+
+/* Genel stiller */
+:root {
+    --primary: #2563eb;
+    --secondary: #4f46e5;
+    --success: #22c55e;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f3f4f6;
+    --card-bg: #ffffff;
+    --border: #e5e7eb;
+    --dark: #111827;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: var(--bg-primary);
+}
+
+/* Hero bölümü */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('../../assets/images/hero-bg.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Kurslar bölümü */
+.courses-preview {
+    padding: 5rem 2rem;
+    background: var(--bg-secondary);
+}
+
+.courses-preview h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-description {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 4rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+/* Maksimum 3 sütun için medya sorgusu */
+@media (min-width: 1200px) {
+    .course-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+    }
+}
+
+.center-button {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Hakkımızda bölümü */
+.about {
+    padding: 5rem 2rem;
+    background: var(--bg-primary);
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* İletişim bölümü */
+.contact {
+    padding: 5rem 2rem;
+    background: var(--bg-secondary);
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive düzenlemeler */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .courses-preview h2 {
+        font-size: 2rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .course-grid {
+        gap: 3rem 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .course-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+} 

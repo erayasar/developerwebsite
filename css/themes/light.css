@@ -1,0 +1,14 @@
+body {
+    --primary: #2563eb;
+    --secondary: #4f46e5;
+    --success: #22c55e;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f3f4f6;
+    --card-bg: #ffffff;
+    --border: #e5e7eb;
+    --dark: #111827;
+} 

@@ -1,0 +1,174 @@
+/* Kurs içerik sayfası ana yapısı */
+.course-content-wrapper {
+    display: flex;
+    min-height: 100vh;
+    padding-top: 60px;
+    background: var(--bg-primary);
+}
+
+/* Sidebar stilleri */
+.course-sidebar {
+    width: 280px;
+    background: var(--bg-primary);
+    border-right: 1px solid var(--border);
+    height: calc(100vh - 60px);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+/* Modül listesi */
+.course-modules {
+    padding: 0;
+}
+
+.module {
+    border-bottom: 1px solid var(--border);
+}
+
+.module-title {
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s ease;
+}
+
+.module-title:hover {
+    background: var(--bg-secondary);
+    color: var(--primary);
+}
+
+.module-title i {
+    transition: transform 0.2s ease;
+}
+
+.module.active .module-title i {
+    transform: rotate(180deg);
+}
+
+/* Ders listesi */
+.module-lessons {
+    display: none;
+    background: var(--bg-secondary);
+}
+
+.module.active .module-lessons {
+    display: block;
+}
+
+.lesson-link {
+    display: block;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.lesson-link::before {
+    content: '';
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text-secondary);
+    transition: all 0.2s ease;
+}
+
+.lesson-link:hover {
+    color: var(--primary);
+    background: rgba(37, 99, 235, 0.05);
+}
+
+.lesson-link:hover::before,
+.lesson-link.active::before {
+    background: var(--primary);
+}
+
+.lesson-link.active {
+    color: var(--primary);
+    background: rgba(37, 99, 235, 0.05);
+    font-weight: 500;
+}
+
+/* Ana içerik alanı */
+.course-main-content {
+    flex: 1;
+    margin-left: 280px;
+    padding: 2rem;
+    background: var(--bg-secondary);
+}
+
+.content-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.content-header h1 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.course-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.course-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.course-meta i {
+    color: var(--primary);
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+    .course-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .course-main-content {
+        margin-left: 0;
+    }
+
+    .course-content-wrapper {
+        flex-direction: column;
+    }
+
+    .module-title {
+        padding: 0.75rem 1rem;
+    }
+
+    .lesson-link {
+        padding: 0.6rem 1rem 0.6rem 2rem;
+    }
+
+    .content-header h1 {
+        font-size: 1.5rem;
+    }
+} 

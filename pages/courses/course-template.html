@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurslar - TechEdu</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- AOS Animasyon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Ana CSS -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">TechEdu</div>
+        <ul class="nav-links">
+            <li><a href="../../index.html">Ana Sayfa</a></li>
+            <li><a href="course-template.html" class="active">Kurslar</a></li>
+            <li><a href="../../index.html#hakkimizda">Hakkımızda</a></li>
+            <li><a href="../../index.html#iletisim">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <main class="courses-page">
+        <section class="courses-header">
+            <h1>Tüm Kurslar</h1>
+            <p class="section-description">Ücretsiz eğitimlerimizle teknoloji yolculuğunuza başlayın</p>
+            <div class="course-filters">
+                <button class="filter-btn active" data-category="all">Tümü</button>
+                <button class="filter-btn" data-category="programlama">Programlama</button>
+                <button class="filter-btn" data-category="web">Web Geliştirme</button>
+                <button class="filter-btn" data-category="security">Siber Güvenlik</button>
+            </div>
+        </section>
+
+        <section class="courses-grid">
+            <div class="course-grid" id="courses-container">
+                <!-- Kurslar JavaScript ile doldurulacak -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TechEdu. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <button class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    <script type="module" src="../../js/courses.js"></script>
+</body>
+</html> 

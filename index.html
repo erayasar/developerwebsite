@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechEdu - Bilgisayar Mühendisliği Eğitim Platformu</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- AOS Animasyon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Ana CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">TechEdu</div>
+        <ul class="nav-links">
+            <li><a href="#anasayfa">Ana Sayfa</a></li>
+            <li><a href="pages/courses/course-template.html">Kurslar</a></li>
+            <li><a href="#hakkimizda">Hakkımızda</a></li>
+            <li><a href="#iletisim">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <header id="anasayfa" class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Geleceğin Teknolojisini Öğreninaaaaaa</h1>
+            <p>Bilgisayar Mühendisliği alanında kapsamlı eğitimlerle kariyerinizi şekillendirin</p>
+            <a href="#courses" class="btn btn-primary btn-lg cta-button">
+                Kurslara Göz At
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="kurslar" class="courses-preview">
+            <h2>Popüler Kurslarımız</h2>
+            <p class="section-description">En çok tercih edilen ücretsiz eğitimlerimizden bazıları</p>
+            <div class="course-grid" id="featured-courses">
+                <!-- Kurslar JavaScript ile doldurulacak -->
+            </div>
+            <div class="center-button">
+                <a href="pages/courses/course-template.html" class="btn btn-primary">
+                    Tüm Kursları Gör
+                </a>
+            </div>
+        </section>
+
+        <section id="hakkimizda" class="about">
+            <div class="about-content" data-aos="fade-up">
+                <h2>Hakkımızda</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Misyonumuz</h3>
+                        <p>Kaliteli ve ücretsiz teknoloji eğitimini herkese ulaştırmak, geleceğin teknoloji liderlerini yetiştirmek.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Eğitmenlerimiz</h3>
+                        <p>Alanında uzman, deneyimli eğitmenlerimizle güncel ve kaliteli eğitim içeriği.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Metodolojimiz</h3>
+                        <p>Uygulamalı eğitim, gerçek projeler ve interaktif öğrenme deneyimi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="iletisim" class="contact">
+            <h2 data-aos="fade-up">İletişim</h2>
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Bize Ulaşın</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Teknoloji Mahallesi, Yazılım Caddesi No:123<br>İstanbul, Türkiye</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+90 (212) 345 67 89</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@techedu.com</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" data-aos="fade-left">
+                    <div class="form-group">
+                        <input type="text" placeholder="Adınız" required>
+                        <input type="email" placeholder="E-posta" required>
+                    </div>
+                    <input type="text" placeholder="Konu" required>
+                    <textarea placeholder="Mesajınız" required></textarea>
+                    <button type="submit" class="btn btn-primary">
+                        Mesaj Gönder
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TechEdu. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <button class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html> 

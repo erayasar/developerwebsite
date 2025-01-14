@@ -1,0 +1,14 @@
+body.dark-theme {
+    --primary: #3b82f6;
+    --secondary: #6366f1;
+    --success: #34d399;
+    --danger: #f87171;
+    --warning: #fbbf24;
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --bg-primary: #111827;
+    --bg-secondary: #1f2937;
+    --card-bg: #1f2937;
+    --border: #374151;
+    --dark: #030712;
+} 
