@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>React - TechEdu</title>
+    <title>Web Geliştirme - TechEdu</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
@@ -23,8 +23,8 @@
     <main class="course-page">
         <section class="course-hero">
             <div class="course-header">
-                <h1>React</h1>
-                <p>Modern web uygulamaları geliştirmek için React kütüphanesini kapsamlı öğrenin</p>
+                <h1>Web Geliştirme</h1>
+                <p>Modern web teknolojilerini öğrenerek tam donanımlı bir web geliştirici olun</p>
             </div>
         </section>
 
@@ -33,7 +33,7 @@
                 <div class="course-info">
                     <div class="info-item">
                         <i class="fas fa-clock"></i>
-                        <span>50 saat</span>
+                        <span>60 saat</span>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-user-graduate"></i>
@@ -41,7 +41,7 @@
                     </div>
                     <div class="info-item">
                         <i class="fas fa-signal"></i>
-                        <span>Orta Seviye</span>
+                        <span>Başlangıç Seviye</span>
                     </div>
                 </div>
                 <div class="course-topics">
@@ -50,37 +50,37 @@
                         <li>
                             <a href="#" class="active">
                                 <i class="fas fa-play-circle"></i>
-                                React'e Giriş
+                                HTML Temelleri
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <i class="fas fa-play-circle"></i>
-                                Component Yapısı
+                                CSS ile Stillendirme
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <i class="fas fa-play-circle"></i>
-                                Props ve State
+                                JavaScript Temelleri
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <i class="fas fa-play-circle"></i>
-                                Hooks Kullanımı
+                                Responsive Tasarım
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <i class="fas fa-play-circle"></i>
-                                React Router
+                                Bootstrap Framework
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <i class="fas fa-play-circle"></i>
-                                State Management
+                                Modern Web Araçları
                             </a>
                         </li>
                     </ul>
@@ -89,72 +89,53 @@
 
             <div class="lesson-content">
                 <div class="lesson-section">
-                    <h2>React'e Giriş</h2>
-                    <p>Bu bölümde React'in temel kavramlarını ve modern web geliştirmedeki önemini öğreneceksiniz.</p>
+                    <h2>HTML Temelleri</h2>
+                    <p>Bu bölümde web sayfalarının temel yapı taşı olan HTML'i öğreneceksiniz.</p>
                     
                     <div class="content-block">
-                        <h3>React Nedir?</h3>
-                        <p>React, Facebook tarafından geliştirilen açık kaynaklı bir JavaScript kütüphanesidir. Başlıca özellikleri:</p>
+                        <h3>HTML Nedir?</h3>
+                        <p>HTML (HyperText Markup Language), web sayfalarının yapısını oluşturan standart işaretleme dilidir. Başlıca özellikleri:</p>
                         <ul>
-                            <li>Component tabanlı yapı</li>
-                            <li>Virtual DOM</li>
-                            <li>JSX syntax</li>
-                            <li>Tek yönlü veri akışı</li>
+                            <li>Kolay öğrenilebilir yapı</li>
+                            <li>Semantik elementler</li>
+                            <li>Tarayıcı uyumluluğu</li>
+                            <li>Multimedya desteği</li>
                         </ul>
                     </div>
 
                     <div class="code-example">
-                        <h3>İlk React Componenti</h3>
-                        <pre><code class="language-jsx">
-import React, { useState } from 'react';
-
-// Fonksiyonel component örneği
-const Welcome = ({ name }) => {
-    // useState hook kullanımı
-    const [count, setCount] = useState(0);
-
-    // Event handler
-    const handleClick = () => {
-        setCount(prevCount => prevCount + 1);
-    };
-
-    return (
-        <div className="welcome-container">
-            <h1>Merhaba, {name}!</h1>
-            <p>Butona {count} kez tıkladınız</p>
-            
-            <button 
-                onClick={handleClick}
-                className="btn-primary"
-            >
-                Tıkla
-            </button>
-        </div>
-    );
-};
-
-// Ana uygulama componenti
-const App = () => {
-    return (
-        <div className="app">
-            <Welcome name="TechEdu" />
-        </div>
-    );
-};
-
-export default App;
+                        <h3>İlk HTML Sayfası</h3>
+                        <pre><code class="language-html">
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlk Web Sayfam</title>
+</head>
+<body>
+    <header>
+        <h1>Hoş Geldiniz</h1>
+        <nav>
+            <ul>
+                <li><a href="#anasayfa">Ana Sayfa</a></li>
+                <li><a href="#hakkimda">Hakkımda</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Ana Sayfa</h2>
+        <p>Bu benim ilk web sayfam!</p>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>
                         </code></pre>
-                    </div>
-
-                    <div class="content-block">
-                        <h3>React'in Avantajları</h3>
-                        <ul>
-                            <li>Yüksek performans</li>
-                            <li>Yeniden kullanılabilir componentler</li>
-                            <li>Geniş ekosistem</li>
-                            <li>Aktif topluluk desteği</li>
-                            <li>SEO dostu yapı (Next.js ile)</li>
-                        </ul>
                     </div>
                 </div>
             </div>

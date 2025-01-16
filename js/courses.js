@@ -4,62 +4,75 @@ import courses from './data/courses.js';
 // Tema değiştirici başlatma
 initThemeSwitcher();
 
-// Kursları yükleme
-const coursesContainer = document.getElementById('courses-container');
-const filterButtons = document.querySelectorAll('.filter-btn');
-
-// Tüm kursları göster
-function displayCourses(category = 'all') {
-    console.log('Displaying courses:', category); // Debug için
-    coursesContainer.innerHTML = '';
-    
-    Object.values(courses).forEach(course => {
-        console.log('Course:', course); // Debug için
-        if (category === 'all' || course.category === category) {
-            const courseCard = createCourseCard(course);
-            coursesContainer.appendChild(courseCard);
-        }
-    });
-}
-
-// Kurs kartı oluştur
 function createCourseCard(course) {
     const card = document.createElement('div');
     card.className = 'course-card';
     card.setAttribute('data-aos', 'fade-up');
     
     card.innerHTML = `
-        <img src="../../assets/images/courses/${course.id}.jpg" alt="${course.title}">
-        <h3>${course.title}</h3>
-        <p class="course-description">${course.description}</p>
-        <div class="course-meta">
-            <span><i class="far fa-clock"></i> ${course.duration}</span>
-            <span><i class="fas fa-layer-group"></i> ${course.level}</span>
-        </div>
-        <div class="course-highlights">
-            <h4>Öne Çıkan Konular:</h4>
-            <ul>
-                ${course.highlights.map(item => `<li>${item}</li>`).join('')}
+        <img src="/assets/images/courses/${course.id}.jpg" alt="${course.title}" class="course-image">
+        <div class="course-content">
+            <h3 class="course-title">${course.title}</h3>
+            <div class="course-meta">
+                <span><i class="fas fa-clock"></i> ${course.duration}</span>
+                <span><i class="fas fa-user-graduate"></i> ${course.students}</span>
+            </div>
+            <ul class="featured-topics">
+                ${course.features.map(topic => `<li>${topic}</li>`).join('')}
             </ul>
         </div>
-        <a href="${course.id}/index.html" class="course-button">Kursa Git</a>
+        <div class="course-footer">
+            <a href="/pages/courses/${course.id}/index.html" class="course-button">
+                Kursa Git <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
     `;
     
     return card;
 }
 
-// Filtreleme işlemleri
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Aktif filtre butonunu güncelle
-        document.querySelector('.filter-btn.active').classList.remove('active');
-        button.classList.add('active');
-        
-        // Kursları filtrele
-        const category = button.dataset.category;
-        displayCourses(category);
-    });
-});
+// Kursları kategoriye göre filtrele
+function filterCourses(category) {
+    const filteredCourses = category === 'all' 
+        ? courses 
+        : courses.filter(course => course.category === category);
+    
+    displayCourses(filteredCourses);
+}
 
-// Sayfa yüklendiğinde tüm kursları göster
-displayCourses(); 
+// Kursları görüntüle
+function displayCourses(coursesToShow) {
+    const coursesContainer = document.getElementById('all-courses');
+    if (!coursesContainer) return; // Container yoksa fonksiyondan çık
+
+    coursesContainer.innerHTML = '';
+    coursesToShow.forEach(course => {
+        const courseCard = createCourseCard(course);
+        coursesContainer.appendChild(courseCard);
+    });
+}
+
+// Filtre butonlarını ayarla
+function setupFilterButtons() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    if (!filterButtons.length) return;
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            const category = button.dataset.category;
+            filterCourses(category);
+        });
+    });
+}
+
+// Sayfa yüklendiğinde
+document.addEventListener('DOMContentLoaded', () => {
+    const coursesContainer = document.getElementById('all-courses');
+    if (coursesContainer) { // Sadece kurslar sayfasında çalıştır
+        setupFilterButtons();
+        filterCourses('all');
+    }
+}); 

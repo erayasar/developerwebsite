@@ -1,258 +1,151 @@
-export default {
-    python: {
-        id: 'python',
-        title: 'Python Programlama',
-        description: 'Sıfırdan ileri seviyeye Python programlama dili ve uygulama geliştirme.',
-        image: '/images/courses/python.jpg',
-        duration: '30+ Saat',
-        level: 'Başlangıç',
-        category: 'programlama',
-        highlights: [
-            'Python Temel Sözdizimi',
-            'Nesne Yönelimli Programlama',
-            'Veri Yapıları ve Algoritmalar',
-            'Dosya İşlemleri ve Veritabanı',
-            'Web Scraping ve Otomasyon'
+const courses = [
+    {
+        id: "algoritma",
+        title: "Algoritma ve Veri Yapıları",
+        description: "Temel algoritma ve veri yapılarını öğrenerek problem çözme becerilerinizi geliştirin",
+        image: "../../../assets/images/courses/algoritma.jpg",
+        duration: "40 saat",
+        students: "250+ öğrenci",
+        level: "Başlangıç Seviye",
+        category: "programlama",
+        topics: [
+            "Algoritmalara Giriş",
+            "Temel Veri Yapıları",
+            "Arama Algoritmaları",
+            "Sıralama Algoritmaları",
+            "İleri Veri Yapıları",
+            "Grafik Algoritmaları"
         ],
-        modules: [
-            {
-                title: 'Python\'a Giriş',
-                lessons: [
-                    'Python Nedir ve Neden Öğrenmeliyiz?',
-                    'Kurulum ve Geliştirme Ortamı',
-                    'İlk Python Programı',
-                    'Değişkenler ve Veri Tipleri',
-                    'Temel Operatörler'
-                ]
-            },
-            {
-                title: 'Kontrol Yapıları',
-                lessons: [
-                    'if-elif-else Yapısı',
-                    'while Döngüsü',
-                    'for Döngüsü',
-                    'break ve continue',
-                    'Fonksiyonlar'
-                ]
-            },
-            {
-                title: 'Veri Yapıları',
-                lessons: [
-                    'Listeler',
-                    'Demetler (Tuples)',
-                    'Sözlükler (Dictionaries)',
-                    'Kümeler (Sets)',
-                    'List Comprehension'
-                ]
-            }
+        features: [
+            "Temel Algoritmalar",
+            "Veri Yapıları",
+            "Problem Çözme"
         ]
     },
-    algoritma: {
-        id: 'algoritma',
-        title: 'Algoritma ve Veri Yapıları',
-        description: 'Temel algoritma kavramları ve veri yapılarının detaylı incelemesi.',
-        image: '/assets/images/courses/algoritma.jpg',
-        duration: '25+ Saat',
-        level: 'Orta',
-        category: 'programlama',
-        highlights: [
-            'Algoritma Analizi',
-            'Temel Veri Yapıları',
-            'Sıralama Algoritmaları',
-            'Arama Algoritmaları',
-            'Graf Algoritmaları'
+    {
+        id: "python",
+        title: "Python Programlama",
+        description: "Sıfırdan ileri seviyeye Python programlama dilini öğrenin",
+        image: "../../../assets/images/courses/python.jpg",
+        duration: "50 saat",
+        students: "500+ öğrenci",
+        level: "Başlangıç Seviye",
+        category: "programlama",
+        topics: [
+            "Python'a Giriş",
+            "Veri Tipleri ve Değişkenler",
+            "Kontrol Yapıları",
+            "Fonksiyonlar",
+            "Nesne Tabanlı Programlama",
+            "Modüller ve Paketler"
+        ],
+        features: [
+            "Python'a Giriş",
+            "Veri Yapıları",
+            "OOP",
+            "Modüller"
         ]
     },
-    webdev: {
-        id: 'webdev',
-        title: 'Web Geliştirme',
-        description: 'Modern web teknolojileri ile sıfırdan web geliştirme.',
-        image: '/assets/images/courses/web.jpg',
-        duration: '40+ Saat',
-        level: 'Başlangıç',
-        category: 'web',
-        highlights: [
-            'HTML5 ve CSS3',
-            'Responsive Tasarım',
-            'JavaScript Temelleri',
-            'DOM Manipülasyonu',
-            'Web API Kullanımı'
+    {
+        id: "web",
+        title: "Web Geliştirme",
+        description: "Modern web teknolojilerini öğrenerek tam donanımlı bir web geliştirici olun",
+        image: "../../../assets/images/courses/webdev.jpg",
+        duration: "60 saat",
+        students: "300+ öğrenci",
+        level: "Başlangıç Seviye",
+        category: "web",
+        topics: [
+            "HTML Temelleri",
+            "CSS ile Stillendirme",
+            "JavaScript Temelleri",
+            "Responsive Tasarım",
+            "Bootstrap Framework",
+            "Modern Web Araçları"
         ],
-        modules: [
-            {
-                title: 'HTML Temelleri',
-                lessons: [
-                    'Web Teknolojilerine Giriş',
-                    'HTML Yapısı ve Etiketler',
-                    'Metin Biçimlendirme',
-                    'Linkler ve Resimler',
-                    'Tablolar ve Listeler'
-                ]
-            },
-            {
-                title: 'CSS ile Tasarım',
-                lessons: [
-                    'CSS Seçiciler',
-                    'Box Model',
-                    'Flexbox Layout',
-                    'Grid Layout',
-                    'Responsive Tasarım'
-                ]
-            },
-            {
-                title: 'JavaScript Temelleri',
-                lessons: [
-                    'JavaScript\'e Giriş',
-                    'DOM Manipülasyonu',
-                    'Events (Olaylar)',
-                    'Asenkron Programlama',
-                    'API Kullanımı'
-                ]
-            }
+        features: [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Bootstrap",
+            "React",
+            "Node.js"
         ]
     },
-    javascript: {
-        id: 'javascript',
-        title: 'Modern JavaScript',
-        description: 'Modern JavaScript özellikleri ve ileri düzey programlama teknikleri.',
-        image: '/images/courses/javascript.jpg',
-        duration: '35+ Saat',
-        level: 'Orta',
-        category: 'web',
-        highlights: [
-            'ES6+ Özellikleri',
-            'Asenkron Programlama',
-            'Modüler JavaScript',
-            'Test Yazımı',
-            'Performans Optimizasyonu'
+    {
+        id: "javascript",
+        title: "JavaScript",
+        description: "Modern web uygulamaları geliştirmek için JavaScript'i derinlemesine öğrenin",
+        image: "../../../assets/images/courses/javascript.jpg",
+        duration: "40 saat",
+        students: "200+ öğrenci",
+        level: "Orta Seviye",
+        category: "web",
+        topics: [
+            "JavaScript Temelleri",
+            "ES6+ Özellikleri",
+            "DOM Manipülasyonu",
+            "Asenkron JavaScript",
+            "API Kullanımı",
+            "Modern JS Araçları"
         ],
-        modules: [
-            {
-                title: 'JavaScript Temelleri',
-                lessons: [
-                    'JavaScript\'e Giriş',
-                    'Değişkenler ve Veri Tipleri',
-                    'Operatörler ve Kontrol Yapıları',
-                    'Fonksiyonlar',
-                    'Diziler ve Nesneler'
-                ]
-            },
-            {
-                title: 'Modern JavaScript',
-                lessons: [
-                    'ES6+ Yenilikleri',
-                    'Arrow Functions',
-                    'Destructuring',
-                    'Spread ve Rest Operatörleri',
-                    'Modules'
-                ]
-            },
-            {
-                title: 'Asenkron JavaScript',
-                lessons: [
-                    'Callbacks',
-                    'Promises',
-                    'Async/Await',
-                    'Fetch API',
-                    'Error Handling'
-                ]
-            }
+        features: [
+            "Modern JavaScript",
+            "DOM",
+            "API",
+            "Asenkron"
         ]
     },
-    react: {
-        id: 'react',
-        title: 'React.js ile Frontend Geliştirme',
-        description: 'Modern frontend uygulamaları geliştirmek için React.js eğitimi.',
-        image: '/images/courses/react.jpg',
-        duration: '45+ Saat',
-        level: 'İleri',
-        category: 'web',
-        highlights: [
-            'React Temelleri',
-            'Component Yapısı',
-            'State Management',
-            'Hooks API',
-            'Performance Optimization'
+    {
+        id: "react",
+        title: "React",
+        description: "Modern web uygulamaları geliştirmek için React kütüphanesini kapsamlı öğrenin",
+        image: "../../../assets/images/courses/react.jpg",
+        duration: "50 saat",
+        students: "300+ öğrenci",
+        level: "Orta Seviye",
+        category: "web",
+        topics: [
+            "React'e Giriş",
+            "Component Yapısı",
+            "Props ve State",
+            "Hooks Kullanımı",
+            "React Router",
+            "State Management"
         ],
-        modules: [
-            {
-                title: 'React Temelleri',
-                lessons: [
-                    'React\'e Giriş',
-                    'Create React App',
-                    'JSX Syntax',
-                    'Components ve Props',
-                    'State ve Lifecycle'
-                ]
-            },
-            {
-                title: 'Modern React',
-                lessons: [
-                    'Hooks Kullanımı',
-                    'Context API',
-                    'React Router',
-                    'Form Yönetimi',
-                    'API Entegrasyonu'
-                ]
-            },
-            {
-                title: 'İleri Seviye React',
-                lessons: [
-                    'Redux ile State Yönetimi',
-                    'Custom Hooks',
-                    'Performance Optimizasyonu',
-                    'Testing',
-                    'Deployment'
-                ]
-            }
+        features: [
+            "React'e Giriş",
+            "JSX",
+            "Componentler",
+            "State Management",
+            "React Router",
+            "Redux"
         ]
     },
-    cybersecurity: {
-        id: 'cybersecurity',
-        title: 'Siber Güvenlik Temelleri',
-        description: 'Temel siber güvenlik kavramları ve güvenli sistem geliştirme.',
-        image: '/images/courses/security.jpg',
-        duration: '30+ Saat',
-        level: 'Başlangıç',
-        category: 'security',
-        highlights: [
-            'Ağ Güvenliği',
-            'Web Güvenliği',
-            'Kriptografi',
-            'Güvenlik Testleri',
-            'Güvenli Kod Geliştirme'
+    {
+        id: "cybersecurity",
+        title: "Siber Güvenlik",
+        description: "Temel siber güvenlik kavramlarını öğrenerek güvenlik uzmanı olma yolunda ilk adımı atın",
+        image: "cybersecurity.jpg",
+        duration: "45 saat",
+        students: "150+ öğrenci",
+        level: "Orta Seviye",
+        category: "security",
+        topics: [
+            "Siber Güvenliğe Giriş",
+            "Ağ Güvenliği",
+            "Web Güvenliği",
+            "Kriptografi",
+            "Güvenlik Testleri",
+            "Sızma Testleri"
         ],
-        modules: [
-            {
-                title: 'Siber Güvenlik Temelleri',
-                lessons: [
-                    'Siber Güvenliğe Giriş',
-                    'Temel Ağ Kavramları',
-                    'Güvenlik Politikaları',
-                    'Risk Analizi',
-                    'Güvenlik Araçları'
-                ]
-            },
-            {
-                title: 'Web Güvenliği',
-                lessons: [
-                    'OWASP Top 10',
-                    'XSS ve CSRF',
-                    'SQL Injection',
-                    'Güvenli Kimlik Doğrulama',
-                    'HTTPS ve SSL/TLS'
-                ]
-            },
-            {
-                title: 'Güvenli Kod Geliştirme',
-                lessons: [
-                    'Güvenli Kodlama Prensipleri',
-                    'Input Validasyonu',
-                    'Güvenli Oturum Yönetimi',
-                    'Kriptografi Kullanımı',
-                    'Güvenlik Testleri'
-                ]
-            }
+        features: [
+            "Temel Güvenlik",
+            "Ağ Güvenliği",
+            "Etik Hacking",
+            "Güvenlik Testleri"
         ]
     }
-}; 
+];
+
+export default courses; 

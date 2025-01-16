@@ -4,13 +4,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algoritma ve Veri Yapıları - TechEdu</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="../../../css/style.css">
 </head>
 <body>
-    <!-- Python sayfasıyla aynı yapı -->
+    <nav class="navbar">
+        <div class="logo">TechEdu</div>
+        <ul class="nav-links">
+            <li><a href="../../../index.html">Ana Sayfa</a></li>
+            <li><a href="../course-template.html">Kurslar</a></li>
+            <li><a href="../../../index.html#hakkimizda">Hakkımızda</a></li>
+            <li><a href="../../../index.html#iletisim">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <main class="course-page">
+        <section class="course-hero">
+            <div class="course-header">
+                <h1>Algoritma ve Veri Yapıları</h1>
+                <p>Temel algoritma ve veri yapılarını öğrenerek problem çözme becerilerinizi geliştirin</p>
+            </div>
+        </section>
+
+        <section class="course-content">
+            <div class="course-sidebar">
+                <div class="course-info">
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>40 saat</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>250+ öğrenci</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-signal"></i>
+                        <span>Başlangıç Seviye</span>
+                    </div>
+                </div>
+                <div class="course-topics">
+                    <h3>Konu Başlıkları</h3>
+                    <ul>
+                        <li>
+                            <a href="#" class="active">
+                                <i class="fas fa-play-circle"></i>
+                                Algoritmalara Giriş
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-play-circle"></i>
+                                Temel Veri Yapıları
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-play-circle"></i>
+                                Arama Algoritmaları
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-play-circle"></i>
+                                Sıralama Algoritmaları
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-play-circle"></i>
+                                İleri Veri Yapıları
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-play-circle"></i>
+                                Grafik Algoritmaları
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="lesson-content">
+                <div class="lesson-section">
+                    <h2>Algoritmalara Giriş</h2>
+                    <p>Bu bölümde algoritmaların temel kavramlarını ve önemini öğreneceksiniz.</p>
+                    
+                    <div class="content-block">
+                        <h3>Algoritma Nedir?</h3>
+                        <p>Bir problemi çözmek için takip edilmesi gereken adımlar bütünüdür. İyi bir algoritma şu özelliklere sahip olmalıdır:</p>
+                        <ul>
+                            <li>Kesinlik</li>
+                            <li>Sonluluk</li>
+                            <li>Verimlilik</li>
+                            <li>Anlaşılırlık</li>
+                        </ul>
+                    </div>
+
+                    <div class="code-example">
+                        <h3>Örnek Algoritma</h3>
+                        <pre><code class="language-python">
+# İkili arama algoritması
+def binary_search(arr: list, target: int) -> int:
+    """
+    Sıralı bir dizide hedef elemanın indeksini bulur.
+    
+    Args:
+        arr: Sıralı dizi
+        target: Aranan eleman
+    
+    Returns:
+        Elemanın indeksi, bulunamazsa -1
+    """
+    left = 0
+    right = len(arr) - 1
+    
+    while left <= right:
+        mid = (left + right) // 2
+        
+        if arr[mid] == target:
+            return mid  # Eleman bulundu
+        elif arr[mid] < target:
+            left = mid + 1  # Sağ yarıya bak
+        else:
+            right = mid - 1  # Sol yarıya bak
+    
+    return -1  # Eleman bulunamadı
+                        </code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TechEdu. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <button class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
-    <script type="module" src="/js/course-content.js"></script>
+    <script type="module" src="../../../js/main.js"></script>
 </body>
 </html> 
