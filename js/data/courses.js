@@ -50,7 +50,7 @@ const courses = [
         id: "web",
         title: "Web Geliştirme",
         description: "Modern web teknolojilerini öğrenerek tam donanımlı bir web geliştirici olun",
-        image: "../../../assets/images/courses/webdev.jpg",
+        image: "../../../assets/images/courses/web.jpg",
         duration: "60 saat",
         students: "300+ öğrenci",
         level: "Başlangıç Seviye",
