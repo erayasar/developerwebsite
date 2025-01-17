@@ -1,5 +1,5 @@
-import { initThemeSwitcher } from './components/theme-switcher.js';
 import courses from './data/courses.js';
+import { initThemeSwitcher } from './components/theme-switcher.js';
 
 // Tema değiştirici başlatma
 initThemeSwitcher();
@@ -43,7 +43,7 @@ function filterCourses(category) {
 // Kursları görüntüle
 function displayCourses(coursesToShow) {
     const coursesContainer = document.getElementById('all-courses');
-    if (!coursesContainer) return; // Container yoksa fonksiyondan çık
+    if (!coursesContainer) return;
 
     coursesContainer.innerHTML = '';
     coursesToShow.forEach(course => {
@@ -71,8 +71,8 @@ function setupFilterButtons() {
 // Sayfa yüklendiğinde
 document.addEventListener('DOMContentLoaded', () => {
     const coursesContainer = document.getElementById('all-courses');
-    if (coursesContainer) { // Sadece kurslar sayfasında çalıştır
+    if (coursesContainer) {
         setupFilterButtons();
-        filterCourses('all');
+        filterCourses('all'); // Başlangıçta tüm kursları göster
     }
 }); 
